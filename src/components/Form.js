@@ -67,7 +67,6 @@ export function Form() {
               inputProps={{
                 style: {
                   height: "20px",
-                  border: "2px outset lightgray",
                   paddingBottom: "20px",
                   paddingTop: "20px",
                   paddingLeft: "10px",

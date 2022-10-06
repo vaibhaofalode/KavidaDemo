@@ -49,7 +49,8 @@ export function Table(props) {
                 Your contacts list is empty!
                 <br />
                 Click here to create a new contact
-                <a> here</a>
+                {/* eslint-disable-next-line  */}
+                <a href='#'> here</a>
               </p>
             </div>
             <div className="footer-container">
