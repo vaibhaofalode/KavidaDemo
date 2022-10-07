@@ -9,6 +9,9 @@
   padding: 10px;
 }
 
+.country-input div {
+  width: 100%;
+}
 .bm-cross-button {
   right: 23px !important;
     top: 6px !important;
@@ -307,4 +310,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .bm-item:hover {
   color: #ffffff;
+}
+
+@media screen and (max-width: 1535px) {
+  .country-container {
+    width: 100%;
+  }
 }

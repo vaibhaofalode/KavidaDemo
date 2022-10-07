@@ -3,7 +3,7 @@ import ReactAutocomplete from "react-autocomplete";
 import { useState } from "react";
 import { countries, mapAPIKey } from "../constants";
 import axios from "axios";
-export function Form() {
+export const Form = () => {
   const [value, setValue] = useState("");
   const [lat, setLat] = useState(24.0391667);
   const [lng, setLng] = useState(110.525);
@@ -49,7 +49,7 @@ export function Form() {
         </div>
         <div className="country-container r-m-control">
           <label> Supplier Country</label>
-          <div style={{ float: "left", width: "100%" }}>
+          <div className="country-input" style={{ float: "left", width: "100%" }}>
             <ReactAutocomplete
               items={countries}
               shouldItemRender={(item, value) =>
@@ -71,7 +71,7 @@ export function Form() {
                   paddingTop: "20px",
                   paddingLeft: "10px",
                   border: "1px solid",
-                  width: "329px",
+                  width: "100%",
                 },
                 placeholder: "Search Country Name",
               }}

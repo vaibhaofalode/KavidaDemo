@@ -1,4 +1,4 @@
-import { withGoogleMap, GoogleMap } from "react-google-maps";
+import { withGoogleMap, GoogleMap, Polyline } from "react-google-maps";
 import { compose, withProps, withStateHandlers } from "recompose";
 import { MarkerComponent } from "./Marker";
 import { useEffect, useState } from "react";
@@ -58,9 +58,20 @@ export const StyledMapWithAnInfoBox = compose(
   return (
     <GoogleMap
       defaultZoom={5}
-      defaultCenter={{ lat: 1, lng: -1 }}
+      defaultCenter={{ lat: 36.05298765935, lng: -112.083756616339 }}
       center={points}
     >
+      <Polyline
+        path={[
+          { lat: points.lat + 2, lng: points.lng - 2 },
+          { lat: points.lat, lng: points.lng },
+          { lat: points.lat - 2, lng: points.lng - 2 },
+        ]}
+        options={{
+          strokeOpacity: 0.75,
+          strokeWeight: 2,
+        }}
+      />
       <MarkerComponent
         color={"red"}
         label={props.label}
